@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ehe für Alle</title>
+    </h:head>
+    <h:body>
+        <h:outputLabel value="Hello, #{loginBean.name}"/>
+
+        <h:form>
+            <!-- Ehe für Alle -->
+            <h:outputLabel value="Ja für die Ehe für alle?" for="question1"/>
+
+            <h:selectOneRadio id="eheFürAlle" required="true" value="#{formularBean.eheFürAlle}">
+                <f:selectItem itemLabel="Ja" itemValue="ja"/>
+                <f:selectItem itemLabel="Nein" itemValue="nein"/>
+            </h:selectOneRadio>
+
+            <!-- Existenz -->
+            <h:outputLabel value="Existieren Sie?" for="existence"/>
+            
+            <h:selectOneRadio id="existenz" required="true" value="#{formularBean.existenz}">
+                <f:selectItem itemLabel="Ja" itemValue="ja"/>
+                <f:selectItem itemLabel="Nein" itemValue="nein"/>
+            </h:selectOneRadio>
+            
+            <!-- Kakao -->
+            <h:outputLabel value="Lieben Sie Kakao?" for="kakao"/>
+            
+            <h:selectOneRadio id="kakao" required="true" value="#{formularBean.kakao}">
+                <f:selectItem itemLabel="Ja" itemValue="ja"/>
+                <f:selectItem itemLabel="Nein" itemValue="nein"/>
+            </h:selectOneRadio>
+            
+            <!-- Kaffee -->
+            <h:outputLabel value="Oder lieben sie eher Kaffe" for="kaffee"/>
+            
+            <h:selectOneRadio id="kaffee" required="true" value="#{formularBean.kaffee}">
+                <f:selectItem itemLabel="Ja" itemValue="ja"/>
+                <f:selectItem itemLabel="Nein" itemValue="nein"/>
+            </h:selectOneRadio>
+            
+            <h:commandButton id="answer" value="Answer" action="formularTwo.xhtml"/>
+        </h:form>
+    </h:body>
+</html>
+
